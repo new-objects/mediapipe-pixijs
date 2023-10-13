@@ -1,0 +1,28 @@
+{
+  "name": "template-vite-pixi5",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:preview": "vite build && vite preview",
+    "prepare": "npx install-peerdeps --dev @new-objects/eslint-config && npx install-peerdeps --dev @new-objects/prettier-config && husky install",
+    "lint": "npx eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "devDependencies": {
+    "@new-objects/eslint-config": "^0.0.2",
+    "@new-objects/prettier-config": "^0.0.2",
+    "husky": "^8.0.0",
+    "vite": "^4.4.11",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "dependencies": {
+    "pixi.js": "^5.3.12"
+  }
+}
